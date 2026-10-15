@@ -1,0 +1,72 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extension files
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Datasets and large raw data (Never commit raw datasets or personal data)
+*.csv
+*.tsv
+*.parquet
+*.feather
+data/raw/
+telco.csv
+
+# Serialized Model Artifacts (Commit reproducible recipes instead of heavy binaries)
+artifacts/*.joblib
+artifacts/*.pkl
+artifacts/*.onnx
+!artifacts/.gitkeep
+
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Logs
+*.log
+logs/

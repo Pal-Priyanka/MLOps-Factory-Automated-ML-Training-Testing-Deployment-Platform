@@ -1,0 +1,611 @@
+{
+  "is_valid": true,
+  "row_count": 7043,
+  "column_count": 50,
+  "missing_required_columns": [],
+  "identified_leakage_columns": [
+    "Customer ID",
+    "Country",
+    "State",
+    "Quarter",
+    "City",
+    "Zip Code",
+    "Latitude",
+    "Longitude",
+    "Customer Status",
+    "Churn Score",
+    "Churn Category",
+    "Churn Reason",
+    "Satisfaction Score"
+  ],
+  "duplicate_rows_count": 0,
+  "target_distribution": {
+    "No": 5174,
+    "Yes": 1869
+  },
+  "target_proportions": {
+    "No": 0.7346,
+    "Yes": 0.2654
+  },
+  "column_summaries": {
+    "Customer ID": {
+      "name": "Customer ID",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 7043,
+      "sample_values": [
+        "8779-QRDMV",
+        "7495-OOKFY",
+        "1658-BYGOY"
+      ]
+    },
+    "Gender": {
+      "name": "Gender",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "Male",
+        "Female"
+      ]
+    },
+    "Age": {
+      "name": "Age",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 62,
+      "sample_values": [
+        "78",
+        "74",
+        "71"
+      ]
+    },
+    "Under 30": {
+      "name": "Under 30",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Senior Citizen": {
+      "name": "Senior Citizen",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Married": {
+      "name": "Married",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Dependents": {
+      "name": "Dependents",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Number of Dependents": {
+      "name": "Number of Dependents",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 10,
+      "sample_values": [
+        "0",
+        "1",
+        "3"
+      ]
+    },
+    "Country": {
+      "name": "Country",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "sample_values": [
+        "United States"
+      ]
+    },
+    "State": {
+      "name": "State",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "sample_values": [
+        "California"
+      ]
+    },
+    "City": {
+      "name": "City",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1106,
+      "sample_values": [
+        "Los Angeles",
+        "Inglewood",
+        "Whittier"
+      ]
+    },
+    "Zip Code": {
+      "name": "Zip Code",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1626,
+      "sample_values": [
+        "90022",
+        "90063",
+        "90065"
+      ]
+    },
+    "Latitude": {
+      "name": "Latitude",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1626,
+      "sample_values": [
+        "34.02381",
+        "34.044271",
+        "34.108833"
+      ]
+    },
+    "Longitude": {
+      "name": "Longitude",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1625,
+      "sample_values": [
+        "-118.156582",
+        "-118.185237",
+        "-118.229715"
+      ]
+    },
+    "Population": {
+      "name": "Population",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1569,
+      "sample_values": [
+        "68701",
+        "55668",
+        "47534"
+      ]
+    },
+    "Quarter": {
+      "name": "Quarter",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "sample_values": [
+        "Q3"
+      ]
+    },
+    "Referred a Friend": {
+      "name": "Referred a Friend",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Number of Referrals": {
+      "name": "Number of Referrals",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 12,
+      "sample_values": [
+        "0",
+        "1",
+        "6"
+      ]
+    },
+    "Tenure in Months": {
+      "name": "Tenure in Months",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 72,
+      "sample_values": [
+        "1",
+        "8",
+        "18"
+      ]
+    },
+    "Offer": {
+      "name": "Offer",
+      "dtype": "str",
+      "null_count": 3877,
+      "null_percentage": 55.05,
+      "unique_count": 5,
+      "sample_values": [
+        "Offer E",
+        "Offer D",
+        "Offer C"
+      ]
+    },
+    "Phone Service": {
+      "name": "Phone Service",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Avg Monthly Long Distance Charges": {
+      "name": "Avg Monthly Long Distance Charges",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 3584,
+      "sample_values": [
+        "0.0",
+        "48.85",
+        "11.33"
+      ]
+    },
+    "Multiple Lines": {
+      "name": "Multiple Lines",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Internet Service": {
+      "name": "Internet Service",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Internet Type": {
+      "name": "Internet Type",
+      "dtype": "str",
+      "null_count": 1526,
+      "null_percentage": 21.67,
+      "unique_count": 3,
+      "sample_values": [
+        "DSL",
+        "Fiber Optic",
+        "Cable"
+      ]
+    },
+    "Avg Monthly GB Download": {
+      "name": "Avg Monthly GB Download",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 50,
+      "sample_values": [
+        "8",
+        "17",
+        "52"
+      ]
+    },
+    "Online Security": {
+      "name": "Online Security",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Online Backup": {
+      "name": "Online Backup",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Device Protection Plan": {
+      "name": "Device Protection Plan",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Premium Tech Support": {
+      "name": "Premium Tech Support",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Streaming TV": {
+      "name": "Streaming TV",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Streaming Movies": {
+      "name": "Streaming Movies",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Streaming Music": {
+      "name": "Streaming Music",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Unlimited Data": {
+      "name": "Unlimited Data",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Contract": {
+      "name": "Contract",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 3,
+      "sample_values": [
+        "Month-to-Month",
+        "One Year",
+        "Two Year"
+      ]
+    },
+    "Paperless Billing": {
+      "name": "Paperless Billing",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Payment Method": {
+      "name": "Payment Method",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 3,
+      "sample_values": [
+        "Bank Withdrawal",
+        "Credit Card",
+        "Mailed Check"
+      ]
+    },
+    "Monthly Charge": {
+      "name": "Monthly Charge",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1585,
+      "sample_values": [
+        "39.65",
+        "80.65",
+        "95.45"
+      ]
+    },
+    "Total Charges": {
+      "name": "Total Charges",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 6540,
+      "sample_values": [
+        "39.65",
+        "633.3",
+        "1752.55"
+      ]
+    },
+    "Total Refunds": {
+      "name": "Total Refunds",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 500,
+      "sample_values": [
+        "0.0",
+        "45.61",
+        "13.43"
+      ]
+    },
+    "Total Extra Data Charges": {
+      "name": "Total Extra Data Charges",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 16,
+      "sample_values": [
+        "20",
+        "0",
+        "10"
+      ]
+    },
+    "Total Long Distance Charges": {
+      "name": "Total Long Distance Charges",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 6087,
+      "sample_values": [
+        "0.0",
+        "390.8",
+        "203.94"
+      ]
+    },
+    "Total Revenue": {
+      "name": "Total Revenue",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 6982,
+      "sample_values": [
+        "59.65",
+        "1024.1",
+        "1910.88"
+      ]
+    },
+    "Satisfaction Score": {
+      "name": "Satisfaction Score",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 5,
+      "sample_values": [
+        "3",
+        "2",
+        "1"
+      ]
+    },
+    "Customer Status": {
+      "name": "Customer Status",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 3,
+      "sample_values": [
+        "Churned",
+        "Stayed",
+        "Joined"
+      ]
+    },
+    "Churn Label": {
+      "name": "Churn Label",
+      "dtype": "str",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Churn Score": {
+      "name": "Churn Score",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 81,
+      "sample_values": [
+        "91",
+        "69",
+        "81"
+      ]
+    },
+    "CLTV": {
+      "name": "CLTV",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 3438,
+      "sample_values": [
+        "5433",
+        "5302",
+        "3179"
+      ]
+    },
+    "Churn Category": {
+      "name": "Churn Category",
+      "dtype": "str",
+      "null_count": 5174,
+      "null_percentage": 73.46,
+      "unique_count": 5,
+      "sample_values": [
+        "Competitor",
+        "Dissatisfaction",
+        "Price"
+      ]
+    },
+    "Churn Reason": {
+      "name": "Churn Reason",
+      "dtype": "str",
+      "null_count": 5174,
+      "null_percentage": 73.46,
+      "unique_count": 20,
+      "sample_values": [
+        "Competitor offered more data",
+        "Competitor made better offer",
+        "Limited range of services"
+      ]
+    }
+  },
+  "validation_errors": [],
+  "validation_warnings": [
+    "Dataset contains 13 known target/identifier leakage columns: ['Customer ID', 'Country', 'State', 'Quarter', 'City', 'Zip Code', 'Latitude', 'Longitude', 'Customer Status', 'Churn Score', 'Churn Category', 'Churn Reason', 'Satisfaction Score']. These MUST be dropped prior to model feature engineering."
+  ]
+}

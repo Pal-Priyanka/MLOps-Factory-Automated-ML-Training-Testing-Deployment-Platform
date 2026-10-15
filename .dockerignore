@@ -1,0 +1,38 @@
+# Version Control & Environments
+.git/
+.gitignore
+.venv/
+venv/
+ENV/
+env/
+.idea/
+.vscode/
+
+# Raw Datasets (Must never be baked into container image)
+*.csv
+*.tsv
+*.parquet
+*.feather
+data/raw/
+telco.csv
+
+# Python Caches & Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation & Scratch Files
+docs/
+scratch/
+reports/
+*.md
+!README.md
+
+# Logs & Secrets
+*.log
+logs/
+.env
+.env.*

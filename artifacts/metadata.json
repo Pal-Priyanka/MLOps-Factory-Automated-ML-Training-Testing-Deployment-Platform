@@ -1,0 +1,325 @@
+{
+  "model_name": "Baseline_LogisticRegression",
+  "trained_at_utc": "2026-10-15T05:50:16.984814+00:00",
+  "model_sha256": "2026d456867f2ebbfe93d6cc7981cb54b14fe222a8455d51935cbaf2024cf729",
+  "dataset_provenance": {
+    "filepath": "C:\\Users\\palan\\OneDrive\\Desktop\\Projects\\Project-1-MLOps-Factory\\telco.csv",
+    "filename": "telco.csv",
+    "sha256_checksum": "f056d152686daf076f0b18a84b5d61f0c14d04121c989e06ca64fa94544712d3",
+    "size_bytes": 1932822,
+    "row_count": 7043,
+    "column_count": 50,
+    "columns": [
+      "Customer ID",
+      "Gender",
+      "Age",
+      "Under 30",
+      "Senior Citizen",
+      "Married",
+      "Dependents",
+      "Number of Dependents",
+      "Country",
+      "State",
+      "City",
+      "Zip Code",
+      "Latitude",
+      "Longitude",
+      "Population",
+      "Quarter",
+      "Referred a Friend",
+      "Number of Referrals",
+      "Tenure in Months",
+      "Offer",
+      "Phone Service",
+      "Avg Monthly Long Distance Charges",
+      "Multiple Lines",
+      "Internet Service",
+      "Internet Type",
+      "Avg Monthly GB Download",
+      "Online Security",
+      "Online Backup",
+      "Device Protection Plan",
+      "Premium Tech Support",
+      "Streaming TV",
+      "Streaming Movies",
+      "Streaming Music",
+      "Unlimited Data",
+      "Contract",
+      "Paperless Billing",
+      "Payment Method",
+      "Monthly Charge",
+      "Total Charges",
+      "Total Refunds",
+      "Total Extra Data Charges",
+      "Total Long Distance Charges",
+      "Total Revenue",
+      "Satisfaction Score",
+      "Customer Status",
+      "Churn Label",
+      "Churn Score",
+      "CLTV",
+      "Churn Category",
+      "Churn Reason"
+    ]
+  },
+  "dataset_validation": {
+    "is_valid": true,
+    "row_count": 7043,
+    "target_distribution": {
+      "No": 5174,
+      "Yes": 1869
+    }
+  },
+  "environment": {
+    "python_version": "3.12.10",
+    "scikit_learn_version": "1.9.1",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "features": {
+    "numeric_features": [
+      "Age",
+      "Number of Dependents",
+      "Population",
+      "Number of Referrals",
+      "Tenure in Months",
+      "Avg Monthly Long Distance Charges",
+      "Avg Monthly GB Download",
+      "Monthly Charge",
+      "Total Charges",
+      "Total Refunds",
+      "Total Extra Data Charges",
+      "Total Long Distance Charges",
+      "Total Revenue",
+      "CLTV"
+    ],
+    "categorical_features": [
+      "Gender",
+      "Under 30",
+      "Senior Citizen",
+      "Married",
+      "Dependents",
+      "Referred a Friend",
+      "Offer",
+      "Phone Service",
+      "Multiple Lines",
+      "Internet Service",
+      "Internet Type",
+      "Online Security",
+      "Online Backup",
+      "Device Protection Plan",
+      "Premium Tech Support",
+      "Streaming TV",
+      "Streaming Movies",
+      "Streaming Music",
+      "Unlimited Data",
+      "Contract",
+      "Paperless Billing",
+      "Payment Method"
+    ],
+    "total_features": 36
+  },
+  "target_column": "Churn Label",
+  "quality_gates": {
+    "passed": true,
+    "model_name": "Candidate_HistGradientBoosting",
+    "passed_checks_count": 7,
+    "total_checks_count": 7,
+    "failure_reasons": [],
+    "is_production_ready": true,
+    "checks": [
+      {
+        "metric_name": "ROC-AUC",
+        "observed_value": 0.9043,
+        "threshold_value": 0.82,
+        "comparison_operator": ">=",
+        "passed": true,
+        "description": "Discrimination capability across classification thresholds"
+      },
+      {
+        "metric_name": "Recall (Churners)",
+        "observed_value": 0.7861,
+        "threshold_value": 0.7,
+        "comparison_operator": ">=",
+        "passed": true,
+        "description": "Proportion of actual churners identified by the model"
+      },
+      {
+        "metric_name": "Precision (Churners)",
+        "observed_value": 0.6504,
+        "threshold_value": 0.5,
+        "comparison_operator": ">=",
+        "passed": true,
+        "description": "Ratio of true churners among all predicted churners"
+      },
+      {
+        "metric_name": "F1-Score",
+        "observed_value": 0.7119,
+        "threshold_value": 0.6,
+        "comparison_operator": ">=",
+        "passed": true,
+        "description": "Harmonic mean of precision and recall"
+      },
+      {
+        "metric_name": "Accuracy",
+        "observed_value": 0.8311,
+        "threshold_value": 0.75,
+        "comparison_operator": ">=",
+        "passed": true,
+        "description": "Overall accuracy across both classes"
+      },
+      {
+        "metric_name": "Training Duration (s)",
+        "observed_value": 1.5886,
+        "threshold_value": 120.0,
+        "comparison_operator": "<=",
+        "passed": true,
+        "description": "Execution time budget for retraining pipelines"
+      },
+      {
+        "metric_name": "Candidate vs Baseline ROC-AUC",
+        "observed_value": 0.9043,
+        "threshold_value": 0.9087,
+        "comparison_operator": ">=",
+        "passed": true,
+        "description": "Candidate ROC-AUC vs Baseline (0.9087)"
+      }
+    ]
+  },
+  "reference_statistics": {
+    "numeric_means": {
+      "Age": 46.58619182870876,
+      "Number of Dependents": 0.45968975311339305,
+      "Population": 22007.63644308499,
+      "Number of Referrals": 1.9554293205156217,
+      "Tenure in Months": 32.75879396984924,
+      "Avg Monthly Long Distance Charges": 23.08514529167577,
+      "Avg Monthly GB Download": 20.401791566528292,
+      "Monthly Charge": 64.88055494865634,
+      "Total Charges": 2311.9788158182214,
+      "Total Refunds": 2.005226130653267,
+      "Total Extra Data Charges": 6.4430849901682326,
+      "Total Long Distance Charges": 768.4116386279222,
+      "Total Revenue": 3084.828313305659,
+      "CLTV": 4403.433034738912
+    },
+    "numeric_stds": {
+      "Age": 16.807321857868907,
+      "Number of Dependents": 0.9574437803531987,
+      "Population": 21021.18776492671,
+      "Number of Referrals": 2.9897445477777933,
+      "Tenure in Months": 24.669226589076835,
+      "Avg Monthly Long Distance Charges": 15.384557323791748,
+      "Avg Monthly GB Download": 20.3513827971129,
+      "Monthly Charge": 30.32016626577553,
+      "Total Charges": 2290.432134449077,
+      "Total Refunds": 7.943788244681816,
+      "Total Extra Data Charges": 24.219879930284524,
+      "Total Long Distance Charges": 856.6254604784311,
+      "Total Revenue": 2899.0770229281766,
+      "CLTV": 1185.2170556098438
+    },
+    "numeric_quantiles": {
+      "Age": {
+        "0.1": 24.0,
+        "0.25": 33.0,
+        "0.5": 46.0,
+        "0.75": 60.0,
+        "0.9": 71.0
+      },
+      "Number of Dependents": {
+        "0.1": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.9": 2.0
+      },
+      "Population": {
+        "0.1": 404.6,
+        "0.25": 2344.0,
+        "0.5": 17372.0,
+        "0.75": 36057.0,
+        "0.9": 50070.0
+      },
+      "Number of Referrals": {
+        "0.1": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 3.0,
+        "0.9": 7.0
+      },
+      "Tenure in Months": {
+        "0.1": 2.0,
+        "0.25": 9.0,
+        "0.5": 29.0,
+        "0.75": 56.0,
+        "0.9": 69.0
+      },
+      "Avg Monthly Long Distance Charges": {
+        "0.1": 1.27,
+        "0.25": 9.31,
+        "0.5": 23.27,
+        "0.75": 36.32,
+        "0.9": 44.554
+      },
+      "Avg Monthly GB Download": {
+        "0.1": 0.0,
+        "0.25": 3.0,
+        "0.5": 17.0,
+        "0.75": 27.0,
+        "0.9": 53.0
+      },
+      "Monthly Charge": {
+        "0.1": 20.05,
+        "0.25": 35.2,
+        "0.5": 70.35,
+        "0.75": 90.15,
+        "0.9": 103.15
+      },
+      "Total Charges": {
+        "0.1": 84.02000000000001,
+        "0.25": 412.55,
+        "0.5": 1412.65,
+        "0.75": 3877.95,
+        "0.9": 6023.190000000005
+      },
+      "Total Refunds": {
+        "0.1": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.9": 0.0
+      },
+      "Total Extra Data Charges": {
+        "0.1": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.9": 0.0
+      },
+      "Total Long Distance Charges": {
+        "0.1": 3.918000000000003,
+        "0.25": 76.19999999999999,
+        "0.5": 424.84,
+        "0.75": 1220.16,
+        "0.9": 2131.412000000003
+      },
+      "Total Revenue": {
+        "0.1": 118.162,
+        "0.25": 621.0999999999999,
+        "0.5": 2132.08,
+        "0.75": 4918.56,
+        "0.9": 7774.072000000003
+      },
+      "CLTV": {
+        "0.1": 2606.6,
+        "0.25": 3483.0,
+        "0.5": 4525.0,
+        "0.75": 5383.0,
+        "0.9": 5874.800000000001
+      }
+    },
+    "train_row_count": 4577,
+    "val_row_count": 1057,
+    "test_row_count": 1409
+  }
+}
