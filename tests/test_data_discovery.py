@@ -1,5 +1,6 @@
 """Unit tests for dataset discovery, exclusion rules, and cryptographic checksums."""
 
+from pathlib import Path
 import pytest
 from mlops_factory.data.discovery import (
     compute_file_sha256,
@@ -8,9 +9,17 @@ from mlops_factory.data.discovery import (
 )
 
 
-def test_discover_dataset_finds_telco_csv():
-    """Validates that recursive discovery correctly locates telco.csv in workspace."""
-    found_path = discover_dataset("telco.csv")
+def test_discover_dataset_finds_telco_csv(tmp_path):
+    """Validates that recursive discovery correctly locates dataset file in workspace or search root."""
+    target_csv = Path("telco.csv")
+    if target_csv.is_file():
+        found_path = discover_dataset("telco.csv")
+    else:
+        # For CI environments where raw datasets are intentionally excluded from Git
+        mock_file = tmp_path / "telco.csv"
+        mock_file.write_text("Customer ID,Gender\n1,Male\n", encoding="utf-8")
+        found_path = discover_dataset("telco.csv", search_root=tmp_path)
+
     assert found_path.exists()
     assert found_path.is_file()
     assert found_path.name == "telco.csv"
