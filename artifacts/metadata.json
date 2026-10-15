@@ -3,7 +3,7 @@
   "trained_at_utc": "2026-10-15T05:50:16.984814+00:00",
   "model_sha256": "2026d456867f2ebbfe93d6cc7981cb54b14fe222a8455d51935cbaf2024cf729",
   "dataset_provenance": {
-    "filepath": "C:\\Users\\palan\\OneDrive\\Desktop\\Projects\\Project-1-MLOps-Factory\\telco.csv",
+    "filepath": "telco.csv",
     "filename": "telco.csv",
     "sha256_checksum": "f056d152686daf076f0b18a84b5d61f0c14d04121c989e06ca64fa94544712d3",
     "size_bytes": 1932822,

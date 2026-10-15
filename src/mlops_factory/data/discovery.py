@@ -95,8 +95,13 @@ def inspect_dataset_provenance(filepath: Path) -> DatasetMetadata:
     df = pd.read_csv(filepath)
     row_count, col_count = df.shape
 
+    try:
+        display_path = filepath.relative_to(Path.cwd()).as_posix()
+    except ValueError:
+        display_path = filepath.name
+
     return DatasetMetadata(
-        filepath=str(filepath.resolve()),
+        filepath=display_path,
         filename=filepath.name,
         sha256_checksum=checksum,
         size_bytes=size_bytes,
