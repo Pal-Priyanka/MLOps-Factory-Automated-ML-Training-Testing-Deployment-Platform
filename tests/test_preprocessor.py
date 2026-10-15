@@ -1,8 +1,6 @@
 """Unit tests for feature preprocessing, pipeline fitting, and leakage elimination."""
 
 import numpy as np
-import pandas as pd
-import pytest
 from mlops_factory.config import DEFAULT_CONFIG
 from mlops_factory.features.preprocessor import (
     build_preprocessor_pipeline,

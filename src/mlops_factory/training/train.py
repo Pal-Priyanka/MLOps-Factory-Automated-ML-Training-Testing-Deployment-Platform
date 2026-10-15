@@ -1,15 +1,12 @@
 """Training orchestrator, baseline vs candidate evaluation, artifact packaging, and verification."""
 
-import hashlib
 import json
 import platform
 import time
-from dataclasses import asdict
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Optional, Tuple
 import joblib
-import numpy as np
 import pandas as pd
 import sklearn
 from sklearn.ensemble import HistGradientBoostingClassifier
@@ -18,13 +15,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 
 from mlops_factory.config import DEFAULT_CONFIG, PipelineConfig
-from mlops_factory.data.discovery import DatasetMetadata, compute_file_sha256, discover_dataset, inspect_dataset_provenance
-from mlops_factory.data.validator import DataValidationResult, validate_dataset
-from mlops_factory.evaluation.evaluator import ModelEvaluationResult, evaluate_model_performance
-from mlops_factory.evaluation.gates import QualityGateResult, evaluate_quality_gates
+from mlops_factory.data.discovery import compute_file_sha256, discover_dataset, inspect_dataset_provenance
+from mlops_factory.data.validator import validate_dataset
+from mlops_factory.evaluation.evaluator import evaluate_model_performance
+from mlops_factory.evaluation.gates import evaluate_quality_gates
 from mlops_factory.features.preprocessor import (
     build_preprocessor_pipeline,
-    clean_inference_features,
     prepare_features_and_target,
 )
 
@@ -155,13 +151,9 @@ class TrainingOrchestrator:
 
         # Model selection based on validation ROC-AUC
         if candidate_val_metrics.roc_auc >= baseline_val_metrics.roc_auc:
-            selected_model = candidate_model
             selected_model_name = "Candidate_HistGradientBoosting"
-            selected_train_time = candidate_train_time
         else:
-            selected_model = baseline_model
             selected_model_name = "Baseline_LogisticRegression"
-            selected_train_time = baseline_train_time
 
         # 6. Evaluate both on Unbiased Holdout Test Set
         baseline_test_metrics = evaluate_model_performance(
@@ -182,11 +174,6 @@ class TrainingOrchestrator:
             training_duration=candidate_train_time,
         )
 
-        selected_test_metrics = (
-            candidate_test_metrics
-            if selected_model_name == "Candidate_HistGradientBoosting"
-            else baseline_test_metrics
-        )
 
         # 7. Quality Gates Evaluation
         gate_result = evaluate_quality_gates(

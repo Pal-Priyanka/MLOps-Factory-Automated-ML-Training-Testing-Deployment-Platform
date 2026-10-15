@@ -1,0 +1,14 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+# Select standard error, pyflakes, and warning rules for CI
+select = ["E", "F", "W"]
+ignore = [
+    "E501",  # Line too long (handled by formatter)
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

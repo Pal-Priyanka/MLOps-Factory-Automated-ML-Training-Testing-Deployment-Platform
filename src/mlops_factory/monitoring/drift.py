@@ -55,7 +55,7 @@ def calculate_psi(
 ) -> float:
     """
     Calculates Population Stability Index (PSI) between reference and production sample.
-    
+
     PSI interpretation:
       < 0.10: No significant distribution change.
       0.10 - 0.25: Moderate shift; investigate.

@@ -2,7 +2,7 @@
 
 import time
 from dataclasses import asdict, dataclass, field
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 import numpy as np
 import pandas as pd
 from sklearn.metrics import (

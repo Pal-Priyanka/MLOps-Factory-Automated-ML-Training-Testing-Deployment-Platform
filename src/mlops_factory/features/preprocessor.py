@@ -18,7 +18,7 @@ def build_preprocessor_pipeline(
     """
     Constructs a ColumnTransformer that imputes and scales numeric features,
     and imputes and one-hot encodes categorical features.
-    
+
     Safe against unknown categories in production via `handle_unknown='ignore'`.
     """
     numeric_transformer = Pipeline(

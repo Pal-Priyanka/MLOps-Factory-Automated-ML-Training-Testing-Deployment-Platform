@@ -1,8 +1,7 @@
 """Unit tests for dataset schema verification, missing columns, and data leakage audit."""
 
 import pandas as pd
-import pytest
-from mlops_factory.config import DEFAULT_CONFIG, PipelineConfig
+from mlops_factory.config import DEFAULT_CONFIG
 from mlops_factory.data.validator import validate_dataset
 
 

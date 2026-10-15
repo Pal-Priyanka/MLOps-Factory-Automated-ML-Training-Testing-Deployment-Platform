@@ -1,8 +1,5 @@
 """Unit and integration tests for training orchestration, quality gates, and artifact integrity."""
 
-import json
-from pathlib import Path
-import joblib
 import pytest
 from mlops_factory.config import PipelineConfig, QualityGateConfig
 from mlops_factory.evaluation.evaluator import (

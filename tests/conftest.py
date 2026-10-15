@@ -10,7 +10,7 @@ import pytest
 # Ensure src is on python path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from mlops_factory.config import DEFAULT_CONFIG, PipelineConfig
+from mlops_factory.config import DEFAULT_CONFIG
 from mlops_factory.features.preprocessor import build_preprocessor_pipeline
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression

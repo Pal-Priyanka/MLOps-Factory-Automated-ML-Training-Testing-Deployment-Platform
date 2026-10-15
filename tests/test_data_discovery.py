@@ -1,6 +1,5 @@
 """Unit tests for dataset discovery, exclusion rules, and cryptographic checksums."""
 
-from pathlib import Path
 import pytest
 from mlops_factory.data.discovery import (
     compute_file_sha256,

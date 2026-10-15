@@ -2,7 +2,7 @@
 
 import threading
 import time
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from typing import Any, Dict, List
 import numpy as np

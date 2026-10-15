@@ -7,7 +7,7 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 import pandas as pd
-from fastapi import FastAPI, HTTPException, Request, Response, status
+from fastapi import FastAPI, HTTPException, Request, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse, PlainTextResponse
 
@@ -18,7 +18,6 @@ from mlops_factory.monitoring.tracker import metrics_tracker
 from mlops_factory.serving.schemas import (
     BatchPredictionRequest,
     BatchPredictionResponse,
-    CustomerFeatures,
     HealthResponse,
     MetadataResponse,
     PredictionRequest,

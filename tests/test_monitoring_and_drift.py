@@ -2,8 +2,6 @@
 
 import numpy as np
 import pandas as pd
-import pytest
-from mlops_factory.config import DEFAULT_CONFIG
 from mlops_factory.features.preprocessor import clean_inference_features
 from mlops_factory.monitoring.drift import (
     calculate_categorical_psi,

@@ -1,7 +1,6 @@
 """Command-line script to run full training, evaluation, quality gating, and reporting."""
 
 import argparse
-import json
 import sys
 from pathlib import Path
 
